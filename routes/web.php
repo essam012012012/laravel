@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CalcController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get("sum/{x}/{y}",[CalcController::class,"sum"]);
+Route::get("sub/{x}/{y}",[CalcController::class,"sub"]);
+Route::get("milti/{x}/{y}",[CalcController::class,"milti"]);
+Route::get("div/{x}/{y}",[CalcController::class,"div"]);
+
